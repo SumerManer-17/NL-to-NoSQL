@@ -1,0 +1,130 @@
+{
+    "collection": "students",
+    "fields": [
+        {
+            "path": "academic",
+            "types": [
+                "object"
+            ],
+            "sample_values": []
+        },
+        {
+            "path": "academic.department",
+            "types": [
+                "string"
+            ],
+            "sample_values": [
+                "CSE"
+            ]
+        },
+        {
+            "path": "academic.gpa",
+            "types": [
+                "double"
+            ],
+            "sample_values": [
+                8.7
+            ]
+        },
+        {
+            "path": "academic.semester",
+            "types": [
+                "integer"
+            ],
+            "sample_values": [
+                6
+            ]
+        },
+        {
+            "path": "city",
+            "types": [
+                "string"
+            ],
+            "sample_values": [
+                "Pune",
+                "Mumbai",
+                "Kolhapur",
+                "Nashik"
+            ]
+        },
+        {
+            "path": "department",
+            "types": [
+                "string"
+            ],
+            "sample_values": [
+                "CSE",
+                "ECE",
+                "Mechanical"
+            ]
+        },
+        {
+            "path": "gpa",
+            "types": [
+                "double"
+            ],
+            "sample_values": [
+                8.5,
+                7.8,
+                9.1,
+                8.2,
+                7.5
+            ]
+        },
+        {
+            "path": "name",
+            "types": [
+                "string"
+            ],
+            "sample_values": [
+                "Rahul",
+                "Priya",
+                "Amit",
+                "Sneha",
+                "Neha"
+            ]
+        },
+        {
+            "path": "skills",
+            "types": [
+                "array"
+            ],
+            "sample_values": []
+        },
+        {
+            "path": "skills[]",
+            "types": [
+                "string"
+            ],
+            "sample_values": [
+                "Java",
+                "Python",
+                "MongoDB"
+            ]
+        },
+        {
+            "path": "student_id",
+            "types": [
+                "integer"
+            ],
+            "sample_values": [
+                101,
+                102,
+                103,
+                104,
+                105
+            ]
+        },
+        {
+            "path": "year",
+            "types": [
+                "integer"
+            ],
+            "sample_values": [
+                3,
+                2,
+                4
+            ]
+        }
+    ]
+}
