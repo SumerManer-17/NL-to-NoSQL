@@ -1,3 +1,7 @@
+import json
+from pathlib import Path
+
+
 from typing import Any
 
 from backend.database.mongodb import get_database
@@ -156,3 +160,26 @@ if __name__ == "__main__":
             indent=2
         )
     )
+
+
+
+def save_schema_version(schema, version="v1"):
+    output_dir = Path("schema_versions")
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    output_file = output_dir / f"{schema.collection}_{version}.json"
+
+    with output_file.open("w", encoding="utf-8") as file:
+        json.dump(
+            schema.model_dump(),
+            file,
+            indent=4,
+            ensure_ascii=False
+        )
+
+    print(f"Schema saved to: {output_file}")
+
+if __name__ == "__main__":
+    schema = extract_collection_schema("students")
+    print(schema.model_dump_json(indent=4))
+    save_schema_version(schema, "v1")
